@@ -1,24 +1,7 @@
-# README
+Ruby on Rails Resume Site for Otis Milliken
+Rails -v 2.7.1
+Css formatted without use of bootstrap and uses primarily flexbox.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Navbar includes My Mission, About, Blog and Resume
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Primarily to showcase what I've learned through the Odin project but also what i'll learn in college and what I've learned in the past. 
