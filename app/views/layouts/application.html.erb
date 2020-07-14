@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OtisResume</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class = "navbar">
+      <div class = "home-item">
+         <%= link_to "Home", root_path%>
+      </div>
+      <div class = "navbar-item">
+        <%= link_to "My Mission", mymission_path%>
+      </div>
+      <div class = "navbar-item">
+        <%= link_to "About", about_path%>
+      </div>
+      <div class = "navbar-item">
+        <%= link_to "Resume", resume_path%>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
