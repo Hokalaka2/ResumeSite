@@ -12,16 +12,19 @@
   <body>
     <div class = "navbar">
       <div class = "home-item">
-         <%= link_to "Home", root_path%>
+         <%= link_to "Home", "#"%>
       </div>
       <div class = "navbar-item">
-        <%= link_to "My Mission", mymission_path%>
+        <%= link_to "My Mission", "#mission"%>
       </div>
       <div class = "navbar-item">
-        <%= link_to "About", about_path%>
+        <%= link_to "Resume", "#resume"%>
       </div>
       <div class = "navbar-item">
-        <%= link_to "Resume", resume_path%>
+        <%= link_to "Blog", "#"%>
+      </div>
+      <div class="navbar-item">
+        <%= link_to "Contact", "#"%>
       </div>
     </div>
     <%= yield %>
