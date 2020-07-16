@@ -52,15 +52,12 @@
 
 
     <div class = "project-information">
-        <h3 style="text-align: center">Information about</h3>
-        <p></p>
+        <h3 style="text-align: center">Project Information</h3>
+        <p id = "information"></p>
     </div>
     
 </div>
-<br />
-<br />
-<br />
-<br />
+
 <%= render "mission"%>
 <%= render "resume"%>
 
@@ -80,6 +77,14 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
+  var setInfo = document.getElementsById("information")
+  var infoSlide = [
+                    "A snake game created in Java with JavaFX. Displays knowledge of OOP principles and working with ActionEvents.",
+                    "A simple sign up blog website as a way to get comfortable with Devise gem. Shows ability to read documentation.",
+                    "A simple event planner activity in order to get used to Active Record and many_to_many relationships especially using through:. No CSS applied",
+                    "A merge sort algorithm implemented in Java. Showcases knowledge of different algorithms",
+                    "A quick sort algorithm implemented in Java. Showcases knowledge of different algorithms"
+                  ];
 
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -88,5 +93,6 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "flex";
+  setInfo = infoSlide[slideIndex-1];
 }
 </script>

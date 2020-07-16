@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/resume', to: 'pages#resume'
   get '/mymission', to: 'pages#mission'
+  get '/resume_pdf', to: 'pages#resume_pdf'
   
   resources :blogs
 end
