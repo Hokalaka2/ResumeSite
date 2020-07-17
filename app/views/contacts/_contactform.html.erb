@@ -1,0 +1,14 @@
+<%= form_for @contact do |f| %>
+    
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+
+    <%= f.submit %>
+
+<% end %>

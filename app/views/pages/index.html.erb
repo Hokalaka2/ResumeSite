@@ -10,56 +10,49 @@
 <div class="slideshow-container">
 
     <div class="mySlides">
-        <div class="numbertext">1 / 6</div>
+        <div class="numbertext">1 / 5</div>
         <%= video_tag "Snake.mp4", :controls => true, :autoplay => true, class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
     <div class="mySlides">
-         <div class="numbertext">2 / 6</div>
+         <div class="numbertext">2 / 5</div>
         <%= video_tag "LearningDevise.mp4", :controls => true, class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
      <div class="mySlides">
-         <div class="numbertext">3 / 6</div>
+         <div class="numbertext">3 / 5</div>
         <%= video_tag "privateevent2.mp4", :controls => true, class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
      <div class="mySlides">
-         <div class="numbertext">4 / 6</div>
+         <div class="numbertext">4 / 5</div>
         <%= image_tag "Mergesort.png", class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
      <div class="mySlides">
-         <div class="numbertext">5 / 6</div>
+         <div class="numbertext">5 / 5</div>
         <%= image_tag "Quicksort.png", class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-     <div class="mySlides">
-         <div class="numbertext">6 / 6</div>
-        <%= image_tag "Binarysearch.png", class: "video" %>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-
-
 
     <div class = "project-information">
         <h3 style="text-align: center">Project Information</h3>
         <p id = "information"></p>
+        <%= link_to 'https://github.com/Hokalaka2', target: "_blank", class: "github" do %> Github Projects: <i class="fa fa-github" aria-hidden="true"></i> <%end%>
     </div>
     
 </div>
 
 <%= render "mission"%>
 <%= render "resume"%>
+<%= render "contacts/contactform" %>
 
 <script>
     var slideIndex = 1;
@@ -77,14 +70,6 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var setInfo = document.getElementsById("information")
-  var infoSlide = [
-                    "A snake game created in Java with JavaFX. Displays knowledge of OOP principles and working with ActionEvents.",
-                    "A simple sign up blog website as a way to get comfortable with Devise gem. Shows ability to read documentation.",
-                    "A simple event planner activity in order to get used to Active Record and many_to_many relationships especially using through:. No CSS applied",
-                    "A merge sort algorithm implemented in Java. Showcases knowledge of different algorithms",
-                    "A quick sort algorithm implemented in Java. Showcases knowledge of different algorithms"
-                  ];
 
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -93,6 +78,19 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "flex";
-  setInfo = infoSlide[slideIndex-1];
+  showText(slideIndex-1);
+  
+}
+
+function showText(n){
+    var setInfo = document.getElementById("information");
+    var infoSlide = [
+                    "A snake game created in Java with JavaFX. <br /> Displays knowledge of OOP principles and working with ActionEvents. Main difficulties were grow function of snake and setting loss condition. 2019",
+                    "A simple sign up blog website as a way to get comfortable with Devise gem. Showcases ability to read documentation and use different gems. 2020",
+                    "A simple event planner activity in order to get comfortable with Active Record and many_to_many relationships especially using through:. Coded in a way to also use source and custom names of relationships. Will apply css when I have time. 2020",
+                    "A merge sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019",
+                    "A quick sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019"
+                  ];
+    document.getElementById("information").innerHTML = infoSlide[n];
 }
 </script>
