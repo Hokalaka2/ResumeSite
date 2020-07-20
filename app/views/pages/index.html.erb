@@ -11,33 +11,33 @@
 
     <div class="mySlides">
         <div class="numbertext">1 / 5</div>
-        <%= video_tag "Snake.mp4", :controls => true, :autoplay => true, class: "video" %>
+        <%= video_tag "Snake.mp4", :controls => true, :autoplay => true, alt: "Snake Game in Java",class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
     <div class="mySlides">
          <div class="numbertext">2 / 5</div>
-        <%= video_tag "LearningDevise.mp4", :controls => true, class: "video" %>
+        <%= video_tag "LearningDevise.mp4", :controls => true, alt: "Devise signup page", class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
      <div class="mySlides">
          <div class="numbertext">3 / 5</div>
-        <%= video_tag "privateevent2.mp4", :controls => true, class: "video" %>
+        <%= video_tag "privateevent2.mp4", :controls => true, alt: "A event planner website",class: "video" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
      <div class="mySlides">
          <div class="numbertext">4 / 5</div>
-        <%= image_tag "Mergesort.png", class: "video" %>
+        <%= image_tag "Mergesort.png", class: "video", alt: "mergesort coded in java" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
      <div class="mySlides">
          <div class="numbertext">5 / 5</div>
-        <%= image_tag "Quicksort.png", class: "video" %>
+        <%= image_tag "Quicksort.png", class: "video", alt: "quicksort coded in java" %>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
@@ -85,11 +85,11 @@ function showSlides(n) {
 function showText(n){
     var setInfo = document.getElementById("information");
     var infoSlide = [
-                    "A snake game created in Java with JavaFX. <br /> Displays knowledge of OOP principles and working with ActionEvents. Main difficulties were grow function of snake and setting loss condition. 2019",
-                    "A simple sign up blog website as a way to get comfortable with Devise gem. Showcases ability to read documentation and use different gems. 2020",
-                    "A simple event planner activity in order to get comfortable with Active Record and many_to_many relationships especially using through:. Coded in a way to also use source and custom names of relationships. Will apply css when I have time. 2020",
-                    "A merge sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019",
-                    "A quick sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019"
+                    "A snake game created in Java with JavaFX. <br /> Displays knowledge of OOP principles and working with ActionEvents. Main difficulties were grow function of snake and setting loss condition. 2019 1/5",
+                    "A simple sign up blog website as a way to get comfortable with Devise gem. Showcases ability to read documentation and use different gems. 2020 2/5",
+                    "A simple event planner activity in order to get comfortable with Active Record and many_to_many relationships especially using through:. Coded in a way to also use source and custom names of relationships. Will apply css when I have time. 2020 3/5",
+                    "A merge sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019 4/5",
+                    "A quick sort algorithm implemented in Java after watching Abdul Bari algorithm series. Showcases knowledge of different algorithms 2019 5/5"
                   ];
     document.getElementById("information").innerHTML = infoSlide[n];
 }

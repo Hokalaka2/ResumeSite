@@ -1,14 +1,14 @@
-<%= form_for @contact do |f| %>
-    
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+<div class = "form">
+    <%= form_for @contact do |f| %>
+            <h3 id="contact"> Contact Me </h3>
+            <%= f.text_field :email, placeholder: "Email", class: "email-field"%>
 
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+            <%= f.text_field :title, placeholder: "Subject", class: "title-field" %>
+            
+            <%= f.text_area :message, placeholder: "Message", class: "message-field"%>
+        
+            <%= f.submit "Send", class: "submit-btn" %> 
 
-    <%= f.label :message %>
-    <%= f.text_area :message %>
 
-    <%= f.submit %>
-
-<% end %>
+    <% end %>
+</div>
